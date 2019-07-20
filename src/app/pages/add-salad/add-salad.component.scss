@@ -1,0 +1,16 @@
+.container{
+  display: flex;
+  flex-flow: column;
+  margin: 0 40px;
+  input{
+    border: none;
+    font-size: 23px;
+    border-bottom: 1px solid rgb(104, 104, 104);
+    margin-bottom: 20px;
+    outline: none;
+  }
+  button{
+    width: 100%;
+    margin-top: 20px;
+  }
+}

@@ -1,0 +1,14 @@
+.salads {
+  margin: 0 40px;
+  display: flex;
+  flex-flow: column;
+  > a {
+    margin-bottom: 20px;
+  }
+  > div {
+    margin-bottom: 20px;
+    > button {
+      width: 100%;
+    }
+  }
+}

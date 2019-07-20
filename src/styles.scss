@@ -1,1 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Raleway&display=swap');
+
+body{
+  padding: 0;
+  margin: 0;
+}
+
+* {
+  font-family: 'Raleway';
+  box-sizing: border-box;
+}
+
+a, button {
+  cursor: pointer;
+  text-decoration: none;
+  color: #fff;
+  background: #3bab68;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 10px;
+  border: none;
+  text-align: center;
+  outline: none;
+}

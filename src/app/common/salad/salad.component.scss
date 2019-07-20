@@ -1,0 +1,28 @@
+.date{
+  font-family: 'Montserrat'
+}
+
+h2{
+  font-weight: 100;
+  font-family: 'Montserrat';
+  margin: 0;
+  margin-top: 10px;
+}
+
+stfl-rating {
+  display: block;
+  margin-top: 5px;
+}
+
+.img-container{
+  margin-top: 5px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 10px;
+  img{
+    width: 100%;
+  }
+}
