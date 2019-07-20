@@ -19,32 +19,36 @@ export class RateSaladComponent implements OnInit {
     userRatings: []
   }
 
+  get image() {
+    return this.salad.image || 'https://www.valdemarsro.dk/wp-content/2011/04/kartoffelsalat.jpg';
+  }
+
   saladRating: SaladRating = {
     user: '',
     ratings: [
       {
         name: 'Geschmack',
-        rating: Rating.FourStars
+        rating: Rating.FiveStars
       },
       {
         name: 'Konsistenz',
-        rating: Rating.FourStars
+        rating: Rating.FiveStars
       },
       {
         name: 'Zubereitung',
-        rating: Rating.FourStars
+        rating: Rating.FiveStars
       },
       {
         name: 'Optik',
-        rating: Rating.FourStars
+        rating: Rating.FiveStars
       },
       {
         name: 'Geruch',
-        rating: Rating.FourStars
+        rating: Rating.FiveStars
       },
       {
         name: 'Mundgefühl',
-        rating: Rating.FourStars
+        rating: Rating.FiveStars
       },
     ]
   }

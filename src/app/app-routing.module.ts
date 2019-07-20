@@ -5,6 +5,7 @@ import { RateSaladComponent } from './pages/rate-salad/rate-salad.component';
 import { HomeComponent } from './pages/home/home.component';
 import { AddSaladComponent } from './pages/add-salad/add-salad.component';
 import { SaladsComponent } from './pages/salads/salads.component';
+import { EditSaladComponent } from './pages/edit-salad/edit-salad.component';
 
 const routes: Routes = [
   {
@@ -22,6 +23,10 @@ const routes: Routes = [
   {
     path: 'add',
     component: AddSaladComponent
+  },
+  {
+    path: 'edit/:id',
+    component: EditSaladComponent
   },
   {
     path: 'salads',

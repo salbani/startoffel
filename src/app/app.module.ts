@@ -15,6 +15,7 @@ import { UserService } from './services/user.service';
 import { SaladService } from './services/salad.service';
 import { SaladComponent } from './common/salad/salad.component';
 import { SaladsComponent } from './pages/salads/salads.component';
+import { EditSaladComponent } from './pages/edit-salad/edit-salad.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { SaladsComponent } from './pages/salads/salads.component';
     RatingComponent,
     PotatoComponent,
     SaladComponent,
-    SaladsComponent
+    SaladsComponent,
+    EditSaladComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),

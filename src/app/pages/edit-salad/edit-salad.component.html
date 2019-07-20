@@ -1,10 +1,11 @@
-<div class="container">
-  <div class="img-container" *ngIf="img">
-    <img [src]="img" alt="">
+<div *ngIf="salad" class="container">
+  <div class="img-container" *ngIf="salad.image">
+    <img [src]="salad.image" alt="">
   </div>
   <h2>Name:</h2>
-  <input [(ngModel)]="name" type="text" [placeholder]="name">
-  <button (click)="addSalad()">Hinzufügen</button>
+  <input [(ngModel)]="salad.name" type="text" placeholder="name">
+  <button (click)="saveSalad()">Speichern</button>
+  <button (click)="deleteSalad()">Löschen</button>
   <button (click)="imgCapture.click()">Bild aufnehmen</button>
   <button (click)="imgPicker.click()">Bild auswählen</button>
   <input (change)="takeImage($event)" hidden type="file" accept="image/*" capture #imgCapture>

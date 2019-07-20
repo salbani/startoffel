@@ -1,0 +1,30 @@
+.container{
+  display: flex;
+  flex-flow: column;
+  margin: 0 40px;
+  padding-bottom: 100px;
+  input{
+    border: none;
+    font-size: 23px;
+    border-bottom: 1px solid rgb(104, 104, 104);
+    margin-bottom: 20px;
+    outline: none;
+  }
+  button{
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .img-container{
+    margin-top: 5px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 10px;
+    img{
+      width: 100%;
+    }
+  }
+}

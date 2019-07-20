@@ -9,9 +9,8 @@ import { Salad } from '../../interfaces/salad.interface';
 })
 export class AddSaladComponent implements OnInit {
 
-  @ViewChild('video')
-  videoRef: ElementRef<HTMLVideoElement>
   name = '';
+  img: string;
 
   constructor(private saladService: SaladService) { }
 
@@ -19,18 +18,15 @@ export class AddSaladComponent implements OnInit {
   }
 
   async addSalad() {
-    let res = await this.saladService.addSalad({ name: this.name });
+    let res = await this.saladService.addSalad({ name: this.name, image: this.img });
   }
 
-  async takeImage() {
-    const constraints: MediaStreamConstraints = {
-      video: true
+  async takeImage(event: Event) {
+    const reader = new FileReader();
+    reader.onload = () => {
+      this.img = reader.result as string;
     }
-    const videoEl = this.videoRef.nativeElement;
-    if (this.hasGetUserMedia()) {
-      const stream = await navigator.mediaDevices.getUserMedia(constraints);
-      videoEl.srcObject = stream;
-    }
+    reader.readAsDataURL((event.target as HTMLInputElement).files[0])
   }
 
   getMedia() {

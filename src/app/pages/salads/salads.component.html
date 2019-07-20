@@ -3,5 +3,6 @@
   <div *ngFor="let salad of salads">
     <stfl-salad [salad]="salad"></stfl-salad>
     <button (click)="activate(salad)">Aktivieren</button>
+    <a [routerLink]="['/edit', salad.id]">Bearbeiten</a>
   </div>
 </div>

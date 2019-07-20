@@ -2,6 +2,7 @@ import { Controller, Get, Param, Post, Body } from '@nestjs/common';
 import { SaladService } from './salad.service';
 import { AddSaladDto } from './interfaces/add-salad.dto';
 import { SaladRating } from './interfaces/rating.interface';
+import { Salad } from './interfaces/salad.interface';
 
 @Controller('salads')
 export class SaladController {
@@ -28,10 +29,18 @@ export class SaladController {
     return this.saladService.setActiveSalad(id);
   }
 
+  @Post('edit')
+  editSalad(@Body() salad: Salad) {
+    this.saladService.editSalad(salad);
+  }
+  
+  @Get('delete/:id')
+  deleteSalad(@Param('id') id: string){
+    return this.saladService.deleteSalad(id);
+  }
+
   @Post()
   addSalad(@Body() salad: AddSaladDto){
-    console.log(salad);
-    
     return this.saladService.addSalad(salad);
   }
 

@@ -1,5 +1,8 @@
-<div *ngIf="salad">
+<div class="container" *ngIf="salad">
   <h2>{{salad.name}}</h2>
+  <div class="img-container" *ngIf="image">
+    <img [src]="image" alt="">
+  </div>
   <div *ngFor="let rating of saladRating.ratings">
     <h3>{{rating.name}}</h3>
     <stfl-rating [(ngModel)]="rating.rating"></stfl-rating>
